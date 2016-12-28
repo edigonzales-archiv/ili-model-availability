@@ -1,0 +1,33 @@
+INTERLIS 2.3;
+
+/** Bla bla bla Model...
+ */
+!!@ technicalContact=mailto:mirjam.zehnder@kkgeo.ch
+!!@ furtherInformation=Fubar
+MODEL KKGEO_Availability_20160914 (en)
+AT "http://www.kkgeo.ch"
+VERSION "2016-09-14"  =
+  IMPORTS GeometryCHLV95_V1,CHAdminCodes_V1;
+
+  TOPIC Availability =
+    OID AS INTERLIS.UUIDOID;
+
+    /** Kombination Kanton und MGDM-Name muss eindeutig sein.
+     * Pro Kanton und MGDM gibt es maximal ein Multipolygon.
+     */
+    CLASS Availability =
+      /** Perimeter, wo Daten zum MGDM "Subject" vorhanden sind.
+       */
+      Perimeter : MANDATORY GeometryCHLV95_V1.MultiSurface;
+      /** Modellname des MGDM. Eventuell Vergabe durch AI. Pruefung mit ilivalidator-Erweiterung.
+       */
+      Subject : MANDATORY TEXT*255;
+      /** Kantonskuerzel
+       */
+      Canton : MANDATORY CHAdminCodes_V1.CHCantonCode;
+      UNIQUE Canton, Subject;
+    END Availability;
+
+  END Availability;
+
+END KKGEO_Availability_20160914.

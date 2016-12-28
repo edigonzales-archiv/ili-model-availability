@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TRANSFER xmlns="http://www.interlis.ch/INTERLIS2.3">
+  <HEADERSECTION SENDER="ili2pg-3.4.0-20160917" VERSION="2.3">
+    <MODELS>
+      <MODEL NAME="Units" VERSION="2012-02-20" URI="http://www.interlis.ch/models"/>
+      <MODEL NAME="CoordSys" VERSION="2015-11-24" URI="http://www.interlis.ch/models"/>
+      <MODEL NAME="InternationalCodes_V1" VERSION="2011-08-30" URI="http://www.geo.admin.ch"/>
+      <MODEL NAME="Localisation_V1" VERSION="2011-08-30" URI="http://www.geo.admin.ch"/>
+      <MODEL NAME="LocalisationCH_V1" VERSION="2011-08-30" URI="http://www.geo.admin.ch"/>
+      <MODEL NAME="Dictionaries_V1" VERSION="2011-08-30" URI="http://www.geo.admin.ch"/>
+      <MODEL NAME="DictionariesCH_V1" VERSION="2011-08-30" URI="http://www.geo.admin.ch"/>
+      <MODEL NAME="GeometryCHLV03_V1" VERSION="2015-11-12" URI="http://www.geo.admin.ch"/>
+      <MODEL NAME="GeometryCHLV95_V1" VERSION="2015-11-12" URI="http://www.geo.admin.ch"/>
+      <MODEL NAME="CHAdminCodes_V1" VERSION="2011-08-30" URI="http://www.geo.admin.ch"/>
+      <MODEL NAME="AdministrativeUnits_V1" VERSION="2011-08-30" URI="http://www.geo.admin.ch"/>
+      <MODEL NAME="AdministrativeUnitsCH_V1" VERSION="2011-08-30" URI="http://www.geo.admin.ch"/>
+      <MODEL NAME="KKGEO_Availability_20160914" VERSION="2016-09-14" URI="http://www.kkgeo.ch"/>
+    </MODELS>
+  </HEADERSECTION>
+  <DATASECTION>
+    <KKGEO_Availability_20160914.Availability BID="KKGEO_Availability_20160914.Availability">
+      <KKGEO_Availability_20160914.Availability.Availability TID="0cd4b7f7-b3c8-4d36-8127-9b20553aff6d">
+        <Perimeter>
+          <GeometryCHLV95_V1.MultiSurface>
+            <Surfaces>
+              <GeometryCHLV95_V1.SurfaceStructure>
+                <Surface>
+                  <SURFACE>
+                    <BOUNDARY>
+                      <POLYLINE>
+                        <COORD>
+                          <C1>2613751.4321103436</C1>
+                          <C2>1243171.496373789</C2>
+                        </COORD>
+                        <COORD>
+                          <C1>2613751.4321103436</C1>
+                          <C2>1240397.2275933465</C2>
+                        </COORD>
+                        <COORD>
+                          <C1>2615956.620115311</C1>
+                          <C2>1240397.2275933465</C2>
+                        </COORD>
+                        <COORD>
+                          <C1>2616027.755212245</C1>
+                          <C2>1244523.063215543</C2>
+                        </COORD>
+                        <COORD>
+                          <C1>2613751.4321103436</C1>
+                          <C2>1243171.496373789</C2>
+                        </COORD>
+                      </POLYLINE>
+                    </BOUNDARY>
+                  </SURFACE>
+                </Surface>
+              </GeometryCHLV95_V1.SurfaceStructure>
+              <GeometryCHLV95_V1.SurfaceStructure>
+                <Surface>
+                  <SURFACE>
+                    <BOUNDARY>
+                      <POLYLINE>
+                        <COORD>
+                          <C1>2619412.885924495</C1>
+                          <C2>1242336.30177183</C2>
+                        </COORD>
+                        <COORD>
+                          <C1>2619337.5727119274</C1>
+                          <C2>1238721.2675685845</C2>
+                        </COORD>
+                        <COORD>
+                          <C1>2621521.6558763883</C1>
+                          <C2>1238721.2675685845</C2>
+                        </COORD>
+                        <COORD>
+                          <C1>2621446.342663821</C1>
+                          <C2>1242788.1810472358</C2>
+                        </COORD>
+                        <COORD>
+                          <C1>2618659.7537988187</C1>
+                          <C2>1245424.1434871024</C2>
+                        </COORD>
+                        <COORD>
+                          <C1>2619412.885924495</C1>
+                          <C2>1242336.30177183</C2>
+                        </COORD>
+                      </POLYLINE>
+                    </BOUNDARY>
+                  </SURFACE>
+                </Surface>
+              </GeometryCHLV95_V1.SurfaceStructure>
+            </Surfaces>
+          </GeometryCHLV95_V1.MultiSurface>
+        </Perimeter>
+        <Subject>GWS</Subject>
+        <Canton>SO</Canton>
+      </KKGEO_Availability_20160914.Availability.Availability>
+    </KKGEO_Availability_20160914.Availability>
+  </DATASECTION>
+</TRANSFER>

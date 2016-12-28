@@ -1,0 +1,24 @@
+# Schema-Import für Erfassung beim Kanton
+java -jar /home/stefan/Apps/ili2pg-3.4.0/ili2pg.jar --dbdatabase xanadu2 --dbusr stefan --dbpwd ziegler12 --disableValidation --strokeArcs --createUnique --defaultSrsCode 2056 --createEnumTabs --createGeomIdx --modeldir ".;http://models.geo.admin.ch" --models KKGEO_Availability_20160914 --schemaimport --dbschema ai_availability_kanton
+
+# Export Kanton
+java -jar /home/stefan/Apps/ili2pg-3.4.0/ili2pg.jar --dbdatabase xanadu2 --dbusr stefan --dbpwd ziegler12 --disableValidation --modeldir ".;http://models.geo.admin.ch" --models KKGEO_Availability_20160914 --export --dbschema ai_availability_kanton availability_kanton_so_1.xtf
+
+xmllint --format availability_kanton_so_1.xtf -o availability_kanton_so_1.xtf
+
+
+# Schema-Import für Verwaltung bei AI
+java -jar /home/stefan/Apps/ili2pg-3.4.0/ili2pg.jar --dbdatabase xanadu2 --dbusr stefan --dbpwd ziegler12 --disableValidation --strokeArcs --createUnique --defaultSrsCode 2056 --createEnumTabs --createGeomIdx --createBasketCol --modeldir ".;http://models.geo.admin.ch" --models KKGEO_Availability_20160914 --schemaimport --dbschema ai_availability_kkgeo
+
+# Import Daten 1
+
+java -jar /home/stefan/Apps/ili2pg-3.4.0/ili2pg.jar --dbdatabase xanadu2 --dbusr stefan --dbpwd ziegler12 --disableValidation --strokeArcs --createUnique --defaultSrsCode 2056 --createEnumTabs --createGeomIdx --createBasketCol --modeldir ".;http://models.geo.admin.ch" --models KKGEO_Availability_20160914 --import --dbschema ai_availability_kkgeo availability_kanton_so_1.xtf
+
+# Import Daten 2 (= Update: nur Multipolygon geändert)
+java -jar /home/stefan/Apps/ili2pg-3.4.0/ili2pg.jar --dbdatabase xanadu2 --dbusr stefan --dbpwd ziegler12 --disableValidation --strokeArcs --createUnique --defaultSrsCode 2056 --createEnumTabs --createGeomIdx --createBasketCol --modeldir ".;http://models.geo.admin.ch" --models KKGEO_Availability_20160914 --update --dbschema ai_availability_kkgeo availability_kanton_so_2.xtf
+
+
+
+# Zum Erfassen brauche ich ja --createBasketCol nicht!? Erst in der DB, wo ich --update nutzen will...
+
+java -jar /home/stefan/Apps/ili2pg-3.4.0/ili2pg.jar --dbdatabase xanadu2 --dbusr stefan --dbpwd ziegler12 --disableValidation --strokeArcs --createUnique --defaultSrsCode 2056 --createEnumTabs --createGeomIdx --createBasketCol --modeldir ".;http://models.geo.admin.ch" --models Update1 --import --dbschema update_test Update1a1.xtf
